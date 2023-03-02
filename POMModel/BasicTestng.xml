@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="2" parallel="classes" name="Test">
+		<classes>
+			<class name="sauceDemoLoginPage.TC01_VerifyLogin_Valid_U_Valid_P" />
+			<class name="sauceDemoLoginPage.TC02_LoginWith_Valid_U_Invalid_P" />
+			<class name="sauceDemoLoginPage.TC03_LoginWith_Valid_U_blank_P" />
+			<class name="sauceDemoLoginPage.TC04_LoginWith_Invalid_U_valid_P" />
+			<class name="sauceDemoLoginPage.TC05_LoginWith_blank_U_Valid_P" />
+			<class name="sauceDemoLoginPage.TC06_LoginWith_Blank_U_Blank_P" />
+			<class name="sauceDemoLoginPage.TC07_VerifyLogout" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
