@@ -24,7 +24,7 @@ public class TestBaseClass
 	@BeforeMethod
 	public void setup()
 	{
-		System.setProperty("Webdriver.chrome.driver", "C:\\\\Users\\\\comp\\\\eclipse-workspace\\\\JavaProjectWebDriver\\\\chromedriver.exe");
+		System.setProperty("Webdriver.chrome.driver", "D\\Software testing\\My docs\\Selenium\\driver file\\chromedriver.exe");
 		driver=new ChromeDriver();
 		
 //		System.setProperty("Webdriver.gecko.driver", "F:\\D\\Software testing\\My docs\\Selenium\\driver file\\geckodriver.exe");
@@ -36,7 +36,10 @@ public class TestBaseClass
 		
 		driver.get("https://www.amazon.in/");
 		System.out.println("Url Opened");
-		
+	}
+
+	public  void login()
+	{
 		ap=new AmazonPagePOMClass(driver);
 		ap.clickOnSignInAccountLink();
 		ap.clickOnSignInButton();
@@ -48,19 +51,21 @@ public class TestBaseClass
 		SignInPasswordPOMClass sip=new SignInPasswordPOMClass(driver);
 		sip.enterPassword();
 		sip.clickOnSignBtn();
-		
+	}
+	
+	public void searchProductAndSwithOn()
+	{
 		ahp=new AmazonHomePOMClass2(driver);
 		ahp.enterSearchTextBox();
 		ahp.clickSearchButton();
 		ahp.clickOnSamsungFridge();
 		
-		List<String> windowIds=new ArrayList<String>(driver.getWindowHandles());
-		driver.switchTo().window(windowIds.get(1));
-		
+		List<String>WindowIds=new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(WindowIds.get(1));
+		System.out.println("Switched to second window");
 	}
 
-
-	@AfterMethod
+//	@AfterMethod
 	public void tearDown()
 	{
 		ap.clickOnSignInAccountLink();

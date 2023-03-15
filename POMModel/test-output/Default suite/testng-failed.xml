@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="amazonSamsungProductPage.TC02_VerifyAmountAsPerQuantity">
+      <class name="amazonYourAccountPage.TC01_VerifyEnterAmountTextBox">
         <methods>
-          <include name="VerifyAmountAsPerQuantity"/>
-          <include name="tearDown"/>
+          <include name="verifyEnterAmountTextBox"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- amazonSamsungProductPage.TC02_VerifyAmountAsPerQuantity -->
+      </class> <!-- amazonYourAccountPage.TC01_VerifyEnterAmountTextBox -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

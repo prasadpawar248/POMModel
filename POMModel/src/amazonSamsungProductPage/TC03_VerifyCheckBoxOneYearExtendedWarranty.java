@@ -8,6 +8,9 @@ public class TC03_VerifyCheckBoxOneYearExtendedWarranty extends TestBaseClass
 	@Test
 	public void VerifyCheckBoxOneYearExtendedWarranty()
 	{
+		login();
+		searchProductAndSwithOn();
+		
 		AmazonSamsungFridgePagePOMClass asp=new AmazonSamsungFridgePagePOMClass(driver);
 		asp.clickOnOneYearExtendedWarrantyCheckbox();
 		asp.clickOnAddToCartBtn();

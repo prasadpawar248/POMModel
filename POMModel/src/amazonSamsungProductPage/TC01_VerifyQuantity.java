@@ -8,6 +8,9 @@ public class TC01_VerifyQuantity extends TestBaseClass
 	@Test
 	public void VerifyQuantity()
 	{
+		login();
+		searchProductAndSwithOn();
+		
 		AmazonSamsungFridgePagePOMClass asfp=new AmazonSamsungFridgePagePOMClass(driver);
 		asfp.selectQuantityDropdown(1);
 		asfp.clickOnAddToCartBtn();

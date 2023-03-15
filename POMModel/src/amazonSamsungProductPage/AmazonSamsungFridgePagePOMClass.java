@@ -1,14 +1,18 @@
 package amazonSamsungProductPage;
 
+import java.time.Duration;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AmazonSamsungFridgePagePOMClass 
 {
@@ -101,6 +105,21 @@ public class AmazonSamsungFridgePagePOMClass
 			cliseButton.click();
 			System.out.println("clicked on close buttons");
 		}
+		
+		
+	//cart button
+		@FindBy(xpath="/html/body/div[4]/div[3]/div[3]/div/div[1]/div[3]/div[1]/div[2]/div[3]/form/span/span/input")WebElement cartBtn;
+		public void clickOnCartBtn()
+		{
+			WebDriverWait w=new WebDriverWait(driver,Duration.ofSeconds(30));
+			WebElement a=w.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[4]/div[3]/div[3]/div/div[1]/div[3]/div[1]/div[2]/div[3]/form/span/span/input")));
+			
+			act.click(cartBtn).perform();
+			System.out.println("clicked on cart button");
+		}
+		
+		
+		
 //one Year Extended Warranty Checkbox
 	
 	@FindBy(xpath="//input[@id='mbb-offeringID-1']")WebElement oneYearExtendedWarrantyCheckbox;

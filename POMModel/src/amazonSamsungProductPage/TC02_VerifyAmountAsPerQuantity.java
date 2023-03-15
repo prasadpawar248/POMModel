@@ -8,6 +8,9 @@ public class TC02_VerifyAmountAsPerQuantity extends TestBaseClass
 	@Test
 	public void VerifyAmountAsPerQuantity()
 	{
+		login();
+		searchProductAndSwithOn();
+		
 		AmazonSamsungFridgePagePOMClass asp=new AmazonSamsungFridgePagePOMClass(driver);
 		int expectedPrice=0,a=0;
 		for(int i=1;i<=5;i++)
